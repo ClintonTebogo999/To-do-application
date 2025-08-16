@@ -15,7 +15,7 @@ document.getElementById("save-task-button").onclick = function () {
   taskDiv.style.marginBottom = "10px";
   taskDiv.style.borderBottom = "1px solid #eee";
 
-  //created my checkbox and label
+
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.style.marginRight = "10px";
@@ -23,11 +23,11 @@ document.getElementById("save-task-button").onclick = function () {
   const taskLabel = document.createElement("span");
   taskLabel.textContent = taskCount + ". " + taskText;
   taskLabel.style.flex = "1";
-  taskLabel.style.whiteSpace = "pre-wrap"; // Allow multi-line
-  taskLabel.style.wordBreak = "break-word"; // Break long words
-  taskLabel.style.display = "block"; // Make span behave like block for wrapping
+  taskLabel.style.whiteSpace = "pre-wrap"; 
+  taskLabel.style.wordBreak = "break-word";
+  taskLabel.style.display = "block"; 
 
-  // Checkbox event for marking completed tasks
+  
   checkbox.onchange = function () {
     if (checkbox.checked) {
       taskLabel.style.textDecoration = "line-through";
@@ -38,7 +38,6 @@ document.getElementById("save-task-button").onclick = function () {
     }
   };
 
-  // Create delete button for each task
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
   deleteBtn.style.width = "80px";
@@ -54,7 +53,6 @@ document.getElementById("save-task-button").onclick = function () {
     taskDiv.remove();
   };
 
-  // Add checkbox and label to a container for better alignment
   const labelContainer = document.createElement("div");
   labelContainer.style.display = "flex";
   labelContainer.style.alignItems = "center";
@@ -72,3 +70,4 @@ document.getElementById("save-task-button").onclick = function () {
 document.getElementById("cancel-task-button").onclick = function () {
   document.getElementById("task-input").value = "";
 };
+
